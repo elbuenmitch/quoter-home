@@ -100,7 +100,7 @@ export default new Vuex.Store({
         ]
       }
       // console.log('jsonData:', jsonData)
-      //TODO: HIDE THE KEY BEFORE PUBLISHING!!!
+      //TODO: Include the key after the '=' in the following line for the API to work properly
       axios.post('https://vision.googleapis.com/v1/images:annotate?key=',jsonData)
         .then(res => {
           console.log('response in axios .then():', res)

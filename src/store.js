@@ -101,7 +101,7 @@ export default new Vuex.Store({
       }
       // console.log('jsonData:', jsonData)
       //TODO: HIDE THE KEY BEFORE PUBLISHING!!!
-      axios.post('https://vision.googleapis.com/v1/images:annotate?key=AIzaSyByXUZKRJwtiNr78lIKh1vT0EyOAsPIcE4',jsonData)
+      axios.post('https://vision.googleapis.com/v1/images:annotate?key=',jsonData)
         .then(res => {
           console.log('response in axios .then():', res)
           context.commit('handleOCRResponse', res)

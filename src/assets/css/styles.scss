@@ -1,0 +1,585 @@
+@import './fontsncolors.scss';
+
+
+
+////***** NOTE: 
+////pasting this here temporary so that the autocomplete suggests them.
+////When done creating the visual models, move the variables to 'fontsncolors.scss'
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ Variables  ----------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+////***** NOTE END
+
+/* ------------------------------ Colors  ----------------------------- */
+$primary-soft: #FFFFEF;
+$primary-strong: #FEDB5E;
+$primary-strong-less: #FFE588;
+$primary-softer: #FDFDAE;
+$secondary-strong: #55544A;
+$secondary-strong-less: #87897E;
+$secondary-soft: #A6A89C;
+$secondary-softer: #98957B;
+
+$transparent: rgba(0, 0, 255, 0);
+
+$btn-primary-bgd: #FFFFEF;
+
+$header-title-text-clear: #55544A;
+$header-title-subtext-clear: #646359;
+$header-title-bgd-clear: #FEDB5E;
+$header-title-bgd-clear: #FEDB5E;
+
+
+/* ------------------------------ Transition times  ----------------------------- */
+$time1: 1s;
+$time2: 0.5s;
+$time3: 0.2s;
+
+/* ------------------------------ Fonts  ----------------------------- */
+$carterone: 'CarterOne', sans-serif;
+$montserrat-light: 'Montserrat-light', sans-serif;
+$montserrat-lightitalic: 'Montserrat-LightItalic', sans-serif;
+$montserrat-medium: 'Montserrat-Medium', sans-serif;
+$montserrat-semibold: 'Montserrat-SemiBold', sans-serif;
+
+
+
+/* ------------------------------ Distances  ----------------------------- */
+$top-margin-text-box: 8rem;
+$bottom-margin-text-box: 10rem;
+$new-entry-icon-width: 110px;
+$new-entry-icon-height: 100px;
+$top-nav-height: 70px;
+
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* --------------------------- General Settings -------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+*, *::before, *::after  {
+	box-sizing: border-box;
+	z-index: 1;
+    scroll-behavior: smooth;
+    margin: 0;
+	padding: 0;
+}
+a, a:link, a:visited{
+    text-decoration: none;
+    // color: white;
+}
+body{
+    background-color: $primary-soft;
+    font-size: 100%;
+}
+li{
+	list-style: none;
+}
+img{
+	border: none;
+	outline: none;
+}
+figure{
+	margin: 0;
+}
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- Useful Classes --------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.hidden{
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+}
+.no-shadow{
+    box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+/* Cursor types */
+.cursor-pointer {
+    cursor: pointer;
+}
+.cursor-none {
+    cursor: none;
+}
+.cursor-default{
+    cursor: default;
+}
+.cursor-grab {
+    cursor: -webkit-grab; cursor: grab;
+}
+.cursor-grabbing {
+    cursor: -webkit-grabbing; cursor: grabbing;
+}
+
+
+/*/ --------------------------------------------------------------- /*/
+/*/ ------------------ Grid positions as classes ------------------ /*/
+/*/ --------------------------------------------------------------- /*/
+
+//Grid features
+.grid-row {
+	display: grid;
+	width: 100%;
+}
+.centered-grid{
+	align-items: center;
+    justify-items: center;
+}
+.vertical-alignment-end{
+	align-self: end;
+}
+.vertical-alignment-start{
+	align-self: start;
+}
+.grid-centered-horizontally{
+	justify-items: center;
+}
+.grid-centered-vertically{
+	align-items: center;
+}
+.grid-with-column-gap{
+	grid-column-gap: 3rem;
+}
+.grid-with-row-gap{
+	grid-row-gap: 3rem;
+}
+.grid-with-column-gap-small{
+	grid-column-gap: 1.7rem;
+}
+.grid-with-row-gap-small{
+	grid-row-gap: 1.7rem;
+}
+
+//Grid template declarations
+
+//Horizontal grids
+.grid-cols-2{
+	grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3{
+	grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4{
+	grid-template-columns: repeat(4, 1fr);
+}
+
+//Vertical grids
+.grid-rows-2{
+	grid-template-rows: repeat(2, 1fr);
+}
+.grid-rows-3{
+	grid-template-rows: repeat(3, 1fr);
+}
+.grid-rows-4{
+	grid-template-rows: repeat(4, 1fr);
+}
+
+//Inner items location classes
+.first-col{
+	grid-column: 1;
+}
+.second-col{
+	grid-column: 2;
+}
+.third-col{
+	grid-column: 3;
+}
+.fourth-col{
+	grid-column: 4;
+}
+.fifth-col{
+	grid-column: 5;
+}
+.sixth-col{
+	grid-column: 6;
+}
+.seventh-col{
+	grid-column: 7;
+}
+
+.first-row{
+	grid-row: 1;
+}
+.second-row{
+	grid-row: 2;
+}
+.third-row{
+	grid-row: 3;
+}
+.fourth-row{
+	grid-row: 4;
+}
+.fifth-row{
+	grid-row: 5;
+}
+.sixth-row{
+	grid-row: 6;
+}
+.seventh-row{
+	grid-row: 7;
+}
+
+//justifications and position control
+.just-right{
+	justify-self: right;
+}
+.just-left{
+	justify-self: left;
+}
+.just-center{
+	justify-self: center;
+}
+.align-center{
+	align-self: center;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ------------------------- App Specific Styles ------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+
+.btn-medium{
+    font-family: $montserrat-medium;
+    color: $secondary-strong;
+    background-color: $primary-strong;
+    font-family: "Montserrat-Medium", sans-serif;
+    padding: 0.3rem 2rem;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------- Views ------------------------- */
+/* ----------------------------------------------------------------------- */
+
+/* ------------------------- Bottom Nav ------------------------- */
+.top-nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $top-nav-height;
+    font-family: $carterone;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    a, a:visited{
+        color: $secondary-strong;
+    }
+    .header-title{
+        padding: 1rem 1rem 1rem 1.7rem;
+    }
+    .header-sub-title{
+        font-family: $montserrat-medium;
+        font-size: 0.7rem;
+        margin: -1.4rem 1rem 1rem 1.6rem;
+        color: $secondary-strong-less;
+        opacity: 0.7;;
+    }
+}
+
+.lightcolors{
+    background-color: $primary-strong;
+    color: $secondary-strong;
+}
+.darkcolors{
+    background-color: $secondary-strong;
+    color: $primary-strong;
+}
+
+/* ------------------------- Bottom Floating Bar ------------------------- */
+.bottom-nav{
+    position: fixed;
+    bottom: 0;
+    background-color: $secondary-strong;
+    width: 100%;
+    height: 80px;
+    color: $primary-strong;
+    font-family: $carterone;
+    font-size: 1.6rem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    column-gap: 3.5rem;
+    text-transform: uppercase;
+    grid-template-columns: repeat(2, 1fr);
+    a, a:visited{
+        color: #FEDB5E;
+    }
+}
+.add-button-container{
+    input{
+        display: none;
+    }
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    bottom: 50px;
+    height: $new-entry-icon-height;
+    background-color: $transparent;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    .btn-add-floater-bottom{
+        position: relative;
+        // bottom: 0;
+        background-color: $transparent;
+        border: none;
+        background-size: cover;
+        // background-image: url('./assets/appImages/newQuoteIcon.png');
+        width: $new-entry-icon-width;
+        height: 100%;
+        // bottom: 50px;
+        // left: calc((100vh-#{$new-entry-icon-height})/2);
+    
+    }
+
+}
+
+/* ------------------------- TwoOptionBottomBar ------------------------- */
+.two-option-bottom-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $secondary-strong;
+    width: 100%;
+    height: 50px;
+    color: $primary-strong;
+    font-family: $carterone;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-transform: uppercase;
+    grid-template-columns: repeat(2, 1fr);
+    a, a:visited{
+        color: #FEDB5E;
+    }
+    .btn-medium{
+        min-width: 130px;
+        padding: 0.3rem 1rem;
+    }
+    .navbar-left-item{
+        grid-column: 1;
+        color: $secondary-softer;
+        background-color: $primary-soft;
+    }
+    .navbar-right-item{
+        grid-column: 2;
+    }
+}
+
+/* ------------------------- Modal Popup ------------------------- */
+.modal-background{
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-softer;
+    opacity: 0.75;
+}
+.modal-floating-box{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    .container{
+        position: relative;
+        background-color: #FFE588;
+        border-radius: 5px;
+        width: 90%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 0 41px -9px #504e4e;
+        justify-content: center;
+
+        .modal-title{
+            font-size: 2rem;
+            color: $header-title-subtext-clear;
+            font-family: $carterone;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .modal-message{
+            font-size: 1rem;
+            color: $header-title-subtext-clear;
+            font-family: $montserrat-medium;
+            margin-bottom: 3rem;
+        }
+        .modal-icon{
+            background-size: cover;
+            background-image: url('./assets/appImages/spinner-solid.png');
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+            animation: modal-icon-move 3s infinite;
+        }
+    }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes modal-icon-move {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes modal-icon-move {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.5);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+
+/* ------------------------- Detail Quote ------------------------- */
+.white-space{
+    position: relative;
+    height: $top-nav-height;
+}
+.text-area{
+    font-family: $montserrat-light;
+    color: $secondary-soft;
+    text-align: justify;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    background-color: white;
+    border: 1px solid $secondary-soft;
+    border-right: none;
+    border-left: none;
+    max-height: 280px;
+    overflow-y: scroll;
+    font-size: 0.9rem;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+    height: 200px;
+}
+.text-area-notes{
+    height: 100px;
+}
+#new-quote{
+    .image-preview{
+        position: relative;
+        width: auto;
+        max-width: 100%;
+        max-height: 90%;
+        box-shadow: 0 0 30px -3px #b7b7b7;
+        margin: 1.5rem 0 1.5rem 0;
+        z-index: 0;
+    }
+}
+
+.section-title{
+    font-family: $montserrat-semibold;
+    color: $header-title-subtext-clear;
+    margin: 1rem 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9rem;
+    .section-subtitle{
+        color: $header-title-subtext-clear;
+        opacity: 0.7;
+        font-size: 0.6rem;
+        text-align: right;
+        align-self: flex-end;
+        flex: auto;
+        margin-bottom: 3px;
+        z-index: 0;
+    }
+}
+
+.section-divider-line{
+    border: 0.5px $secondary-strong-less solid;
+    opacity: .1;
+    width: 85%;
+    margin: 1rem auto;
+    
+}
+
+
+
+
+
+
+/* ------------------------- Capture ------------------------- */
+#capture{
+    background-color: $primary-soft;
+    display: grid;
+    grid-template-rows: 21% 70% 9%;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 0;
+    #back-home-link, #back-home-link:visited{
+        position: fixed;
+        top: 5px;
+        left:5px;
+        font-family: $montserrat-light;
+        color: $secondary-softer;
+        text-decoration: underline;
+    }
+    #file-input{
+        display: none;
+    }
+    #canvas-imagensita{
+        position: fixed;
+        z-index: -999;
+    }
+    .image-preview{
+        position: relative;
+        width: auto;
+        max-width: 100%;
+        max-height: 90%;
+        box-shadow: 0 0 30px -3px #b7b7b7;
+        
+    }
+    .capture-message{
+        font-size: 2rem;
+        font-family: "Montserrat";
+        font-weight: 500;
+        color: $secondary-strong-less;
+        .capture-submessage{
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: $secondary-soft;
+        }
+    }
+}
+
+
+
+
+

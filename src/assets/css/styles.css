@@ -1,0 +1,480 @@
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- Fonts -------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Montserrat-light';
+  src: url("./assets/fonts/Montserrat-Light.ttf"); }
+@font-face {
+  font-family: 'Montserrat-LightItalic';
+  src: url("./assets/fonts/Montserrat-LightItalic.ttf"); }
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url("./assets/fonts/Montserrat-Medium.ttf"); }
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url("./assets/fonts/Montserrat-SemiBold.ttf"); }
+@font-face {
+  font-family: 'CarterOne';
+  src: url("./assets/fonts/CarterOne.ttf"); }
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- Colors ------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ Variables  ----------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ------------------------------ Colors  ----------------------------- */
+/* ------------------------------ Transition times  ----------------------------- */
+/* ------------------------------ Fonts  ----------------------------- */
+/* ------------------------------ Distances  ----------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* --------------------------- General Settings -------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  z-index: 1;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0; }
+
+a, a:link, a:visited {
+  text-decoration: none; }
+
+body {
+  background-color: #FFFFEF;
+  font-size: 100%; }
+
+li {
+  list-style: none; }
+
+img {
+  border: none;
+  outline: none; }
+
+figure {
+  margin: 0; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- Useful Classes --------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
+
+.no-shadow {
+  box-shadow: none;
+  -webkit-box-shadow: none; }
+
+/* Cursor types */
+.cursor-pointer {
+  cursor: pointer; }
+
+.cursor-none {
+  cursor: none; }
+
+.cursor-default {
+  cursor: default; }
+
+.cursor-grab {
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+.cursor-grabbing {
+  cursor: -webkit-grabbing;
+  cursor: grabbing; }
+
+/*/ --------------------------------------------------------------- /*/
+/*/ ------------------ Grid positions as classes ------------------ /*/
+/*/ --------------------------------------------------------------- /*/
+.grid-row {
+  display: grid;
+  width: 100%; }
+
+.centered-grid {
+  align-items: center;
+  justify-items: center; }
+
+.vertical-alignment-end {
+  align-self: end; }
+
+.vertical-alignment-start {
+  align-self: start; }
+
+.grid-centered-horizontally {
+  justify-items: center; }
+
+.grid-centered-vertically {
+  align-items: center; }
+
+.grid-with-column-gap {
+  grid-column-gap: 3rem; }
+
+.grid-with-row-gap {
+  grid-row-gap: 3rem; }
+
+.grid-with-column-gap-small {
+  grid-column-gap: 1.7rem; }
+
+.grid-with-row-gap-small {
+  grid-row-gap: 1.7rem; }
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr); }
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr); }
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr); }
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, 1fr); }
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, 1fr); }
+
+.grid-rows-4 {
+  grid-template-rows: repeat(4, 1fr); }
+
+.first-col {
+  grid-column: 1; }
+
+.second-col {
+  grid-column: 2; }
+
+.third-col {
+  grid-column: 3; }
+
+.fourth-col {
+  grid-column: 4; }
+
+.fifth-col {
+  grid-column: 5; }
+
+.sixth-col {
+  grid-column: 6; }
+
+.seventh-col {
+  grid-column: 7; }
+
+.first-row {
+  grid-row: 1; }
+
+.second-row {
+  grid-row: 2; }
+
+.third-row {
+  grid-row: 3; }
+
+.fourth-row {
+  grid-row: 4; }
+
+.fifth-row {
+  grid-row: 5; }
+
+.sixth-row {
+  grid-row: 6; }
+
+.seventh-row {
+  grid-row: 7; }
+
+.just-right {
+  justify-self: right; }
+
+.just-left {
+  justify-self: left; }
+
+.just-center {
+  justify-self: center; }
+
+.align-center {
+  align-self: center; }
+
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ------------------------- App Specific Styles ------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------- */
+.btn-medium {
+  font-family: "Montserrat-Medium", sans-serif;
+  color: #55544A;
+  background-color: #FEDB5E;
+  font-family: "Montserrat-Medium", sans-serif;
+  padding: 0.3rem 2rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase; }
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------- Views ------------------------- */
+/* ----------------------------------------------------------------------- */
+/* ------------------------- Bottom Nav ------------------------- */
+.top-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  font-family: "CarterOne", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase; }
+  .top-nav a, .top-nav a:visited {
+    color: #55544A; }
+  .top-nav .header-title {
+    padding: 1rem 1rem 1rem 1.7rem; }
+  .top-nav .header-sub-title {
+    font-family: "Montserrat-Medium", sans-serif;
+    font-size: 0.7rem;
+    margin: -1.4rem 1rem 1rem 1.6rem;
+    color: #87897E;
+    opacity: 0.7; }
+
+.lightcolors {
+  background-color: #FEDB5E;
+  color: #55544A; }
+
+.darkcolors {
+  background-color: #55544A;
+  color: #FEDB5E; }
+
+/* ------------------------- Bottom Floating Bar ------------------------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  background-color: #55544A;
+  width: 100%;
+  height: 80px;
+  color: #FEDB5E;
+  font-family: "CarterOne", sans-serif;
+  font-size: 1.6rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  column-gap: 3.5rem;
+  text-transform: uppercase;
+  grid-template-columns: repeat(2, 1fr); }
+  .bottom-nav a, .bottom-nav a:visited {
+    color: #FEDB5E; }
+
+.add-button-container {
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  bottom: 50px;
+  height: 100px;
+  background-color: rgba(0, 0, 255, 0);
+  display: grid;
+  align-items: center;
+  justify-items: center; }
+  .add-button-container input {
+    display: none; }
+  .add-button-container .btn-add-floater-bottom {
+    position: relative;
+    background-color: rgba(0, 0, 255, 0);
+    border: none;
+    background-size: cover;
+    width: 110px;
+    height: 100%; }
+
+/* ------------------------- TwoOptionBottomBar ------------------------- */
+.two-option-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #55544A;
+  width: 100%;
+  height: 50px;
+  color: #FEDB5E;
+  font-family: "CarterOne", sans-serif;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-transform: uppercase;
+  grid-template-columns: repeat(2, 1fr); }
+  .two-option-bottom-bar a, .two-option-bottom-bar a:visited {
+    color: #FEDB5E; }
+  .two-option-bottom-bar .btn-medium {
+    min-width: 130px;
+    padding: 0.3rem 1rem; }
+  .two-option-bottom-bar .navbar-left-item {
+    grid-column: 1;
+    color: #98957B;
+    background-color: #FFFFEF; }
+  .two-option-bottom-bar .navbar-right-item {
+    grid-column: 2; }
+
+/* ------------------------- Modal Popup ------------------------- */
+.modal-background {
+  position: fixed;
+  z-index: 4;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #FDFDAE;
+  opacity: 0.75; }
+
+.modal-floating-box {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: grid;
+  align-items: center;
+  justify-items: center; }
+  .modal-floating-box .container {
+    position: relative;
+    background-color: #FFE588;
+    border-radius: 5px;
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 41px -9px #504e4e;
+    justify-content: center; }
+    .modal-floating-box .container .modal-title {
+      font-size: 2rem;
+      color: #646359;
+      font-family: "CarterOne", sans-serif;
+      text-transform: uppercase;
+      margin-bottom: 1rem; }
+    .modal-floating-box .container .modal-message {
+      font-size: 1rem;
+      color: #646359;
+      font-family: "Montserrat-Medium", sans-serif;
+      margin-bottom: 3rem; }
+    .modal-floating-box .container .modal-icon {
+      background-size: cover;
+      background-image: url("./assets/appImages/spinner-solid.png");
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+      animation: modal-icon-move 3s infinite; }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes modal-icon-move {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@keyframes modal-icon-move {
+  0% {
+    transform: rotate(0deg) scale(1); }
+  50% {
+    transform: rotate(360deg) scale(1.5); }
+  100% {
+    transform: rotate(0deg) scale(1); } }
+/* ------------------------- Detail Quote ------------------------- */
+.white-space {
+  position: relative;
+  height: 70px; }
+
+.text-area {
+  font-family: "Montserrat-light", sans-serif;
+  color: #A6A89C;
+  text-align: justify;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  background-color: white;
+  border: 1px solid #A6A89C;
+  border-right: none;
+  border-left: none;
+  max-height: 280px;
+  overflow-y: scroll;
+  font-size: 0.9rem;
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  height: 200px; }
+
+.text-area-notes {
+  height: 100px; }
+
+#new-quote .image-preview {
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  max-height: 90%;
+  box-shadow: 0 0 30px -3px #b7b7b7;
+  margin: 1.5rem 0 1.5rem 0;
+  z-index: 0; }
+
+.section-title {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  color: #646359;
+  margin: 1rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem; }
+  .section-title .section-subtitle {
+    color: #646359;
+    opacity: 0.7;
+    font-size: 0.6rem;
+    text-align: right;
+    align-self: flex-end;
+    flex: auto;
+    margin-bottom: 3px;
+    z-index: 0; }
+
+.section-divider-line {
+  border: 0.5px #87897E solid;
+  opacity: .1;
+  width: 85%;
+  margin: 1rem auto; }
+
+/* ------------------------- Capture ------------------------- */
+#capture {
+  background-color: #FFFFEF;
+  display: grid;
+  grid-template-rows: 21% 70% 9%;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 0; }
+  #capture #back-home-link, #capture #back-home-link:visited {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    font-family: "Montserrat-light", sans-serif;
+    color: #98957B;
+    text-decoration: underline; }
+  #capture #file-input {
+    display: none; }
+  #capture #canvas-imagensita {
+    position: fixed;
+    z-index: -999; }
+  #capture .image-preview {
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    max-height: 90%;
+    box-shadow: 0 0 30px -3px #b7b7b7; }
+  #capture .capture-message {
+    font-size: 2rem;
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #87897E; }
+    #capture .capture-message .capture-submessage {
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #A6A89C; }
+
+/*# sourceMappingURL=styles.css.map */
